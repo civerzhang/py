@@ -19,7 +19,6 @@
 # set = set([1, 2, 3])
 # 无序，自动去重，用list创建，add(key)，remove(key)，s1 & s2，s1 | s2
 
-
 # print("enter your name")
 # name = input()
 # print("enter your birth year",name)
@@ -282,16 +281,36 @@
 # im.save('thumb.jpg', 'JPEG')
 
 # 类和示例
-class Student(object):
-  def __init__(self, name, score):
-    self.__name = name
-    self.__score = score
+# class Student(object):
+#     def __init__(self, name, score):
+#         self.__name = name
+#         self.__score = score
 
-  def get_name():
-    return self.__name
+#     def get_name(self):
+#         return self.__name
 
-  def print_score(self):
-    print('%s: %s' % (self.__name, self.__score))
-  pass
-bart = Student('Bart Simpson', 60)
-bart.print_score()
+#     def set_name(self, newName):
+#         self.__name = newName
+#         return
+
+#     def print_score(self):
+#         print('%s: %s' % (self.__name, self.__score))
+
+# bart = Student('Bart Simpson', 60)
+# bart.set_name('hi')
+# bart.print_score()
+
+# 继承
+class Animal(object):
+    def run(self):
+        print('Animal is running...')
+def run_twice(animal):
+    animal.run()
+    animal.run()
+class Dog(Animal):
+    def run(self):
+        print('Dog is running...')
+    def eat(self):
+        print('Eating meat...')
+a = Dog()
+a.run()
